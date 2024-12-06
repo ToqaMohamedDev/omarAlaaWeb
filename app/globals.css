@@ -2,21 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  color: var(--foreground);
-  background: var(--background);
+  overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,4 +12,206 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 19% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 19% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 8 99% 67%;
+    --primary-foreground: 300 0% 100%;
+    --secondary: 240 19% 16%;
+    --secondary-foreground: 300 0% 100%;
+    --tertiary: 27 82% 98%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 237 13% 40%;
+    --accent: 237 9% 96%;
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 8 82% 92%;
+    --input: 8 82% 92%;
+    --ring: 9 99% 67%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 237 22% 20%;
+    --foreground: 60 9.1% 97.8%;
+    --card: 240 19% 16%;
+    --card-foreground: 300 0% 100%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --primary: 8 99% 67%;
+    --primary-foreground: 300 0% 100%;
+    --secondary: 240 19% 16%;
+    --secondary-foreground: 300 0% 100%;
+    --tertiary: 237 22% 20%;
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 237 13% 63%;
+    --accent: 240 19% 16%;
+    --accent-foreground: 300 0% 100%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 237 22% 23%;
+    --input: 237 22% 23%;
+    --ring: 8 99% 48.67%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.box {
+  overflow-x: hidden;
+}
+.in_box {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.mousq {
+  width: 50vw;
+  bottom: 10%;
+  position: absolute;
+  z-index: 3;
+}
+
+.moon {
+  width: 30vw;
+  bottom: 30%;
+  left: 5%;
+  position: absolute;
+  z-index: 1;
+}
+.desert {
+  z-index: 2;
+  position: absolute;
+  bottom: -20%;
+  overflow: hidden;
+}
+
+.bag {
+  @apply overflow-x-hidden;
+}
+
+.in-bag {
+  @apply flex relative w-screen lg:h-[650px] h-[1000px] items-center flex-col justify-center;
+}
+
+.bag-img {
+  @apply  w-[300px]   absolute top-0 z-30 h-[300px];
+}
+
+.books {
+  @apply w-screen flex justify-between items-center;
+}
+
+.books div {
+  @apply absolute top-[20%] left-1/2 transform -translate-x-1/2 w-[50px] h-[150px] rounded-lg z-10;
+  background: linear-gradient(to top, rgb(234, 194, 108), hsl(var(--primary)));
+}
+
+
+/*asd*/
+.btn {
+width: 70px;
+height: 30px;
+position: relative;
+display: block;
+background: #ebebeb;
+border-radius: 200px;
+box-shadow: inset 0px 5px 5px rgba(0,0,0,0.4), inset 0px -5px 15px  rgba(255,255,255,0.4);
+cursor: pointer;
+background-image: url('/pngwing.com-2.png'); 
+background-size: cover; 
+background-position: center;
+transition: 0.3s;
+}
+
+.btn::after {
+  will-change: transform;
+  width: 20px;
+  height: 20px;
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: linear-gradient(180deg,#ffcc89,#d8860b);
+  border-radius: 180px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease; /* أضف انتقال للـ transform */
+}
+input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+input:checked + label {
+  background: #242424;
+  background-image: url('/pngwing.com.png'); 
+  background-size: cover; 
+  background-position: center;
+}
+
+input:checked + label::after {
+  left: 65px; /* غيّر المكان */
+  rotate: 90;
+  transform: translateX(-100%) rotate(360deg); /* الحركة والدوران */
+  background: linear-gradient(180deg,#777,#3a3a3a);
+}
+label:active::after {
+  width: 40px;
+  rotate: 90;
+}
+
+.sun {
+position: absolute;
+width: 15px;
+height:15px;
+top: 7px;
+z-index: 100;
+left: 7px;
+fill: #fff;
+transition: 1.3s;
+}
+.moon {
+  position: absolute;
+  width: 15px;
+  height:15px;
+  top: 7px;
+  z-index: 100;
+  left: 47px;
+  fill: #fff;
+  transition: 0.3s;
+}
+
+input:checked + label .sun {
+  scale: 0; /* يظهر */
+}
+
+input:checked + label .moon {
+  scale: 1; /* يختفي */
+}
+
+input:not(:checked) + label .sun {
+  scale: 1; /* يختفي */
+}
+
+input:not(:checked) + label .moon {
+  scale: 0; /* يظهر */
 }
