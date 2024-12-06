@@ -6,7 +6,6 @@ const variants={
  hidden:{opacity:0},
  enter:{opacity:1},
 };
-
 interface TemplateProps{
     children:React.ReactNode
 }
