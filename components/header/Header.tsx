@@ -6,6 +6,7 @@ import gsap from 'gsap';
 import ThemeSwitcher from '../switch/ThemeSwitcher';
 import Logo from './Logo';
 import Nav from './Nav';
+import Mobile from './Mobile';
 
 
 export default function Header() {
@@ -21,6 +22,7 @@ export default function Header() {
                     linkStyle="relative hover:text-primary transition-all"
                     underlinkStyles="absolute left-0 top-full h-[2px] bg-primary w-full"
                 />
+                <Mobile/>
             </div>
         </Container>
     );

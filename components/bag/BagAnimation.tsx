@@ -37,17 +37,16 @@ export default function BagAnimation() {
                    start: 'top center',
                    end: '+=300',
                    scrub: true,
-                    // markers: true,
                }
            });
-
            tl.to(bagImg, { rotate: 180 }, 0)
              .fromTo(book1, {width:0,height:0, scaleX: 0.3, y: 0, x: 0 }, {width:'50px', height:'150px', y: 300, x: -350, scaleX: 1 }, 1)
              .fromTo(book2, {width:0,height:0, scaleX: 0.3, y: 0, x: 0 }, { width:'50px', height:'150px',y: 300, x: 0, scaleX: 1 }, 1)
              .fromTo(book3, {width:0,height:0, scaleX: 0.3, y: 0, x: 0 }, {width:'50px', height:'150px', y: 300, x: 350, scaleX: 1 }, 1)
              .to(book1,{width:"250px"},2)
              .to(book2,{width:"250px"},2)
-             .to(book3,{width:"250px"},2);
+             .to(book3,{width:"250px"},2)
+             .to(books,{text:'35px'});
        });
 
        mm.add("(max-width: 1024px)", () => {
@@ -58,7 +57,6 @@ export default function BagAnimation() {
                    start: 'top center',
                    end: '+=300',
                    scrub: true,
-                //   markers: true,
                }
            });
 
@@ -68,10 +66,9 @@ export default function BagAnimation() {
              .fromTo(book3, {width:0,height:0, scaleX: 0.3, y: 0, x: 0 }, {width:'50px', height:'150px',  y: 600, x: 0, scaleX: 1 }, 1)    
              .to(book1,{width:"300px"},2)
              .to(book2,{width:"300px"},2)
-             .to(book3,{width:"300px"},2);
+             .to(book3,{width:"300px"},2)
+             .to(books,{text:'35px'});
        });
-
-       // Clean up
        return () => mm.revert();
    }, []);
 
@@ -79,10 +76,10 @@ export default function BagAnimation() {
        <div className='bag'>
            <div className='in-bag' ref={bagRef}>
                <Image src={bag} ref={bagImgRef} className='bag-img' alt='BAG' />
-               <div ref={booksRef} className='books'>
-                   <div  ref={book1Ref} className='book-1'  />
-                   <div  ref={book2Ref} className='book-2'  />
-                   <div  ref={book3Ref} className='book-3'  />
+               <div ref={booksRef} className='books text-[0px]'>
+                   <div  ref={book1Ref} className='book-1' ><p>الصف الاول</p></div>
+                   <div  ref={book2Ref} className='book-2' ><p>الصف الاول</p></div>
+                   <div  ref={book3Ref} className='book-3' ><p>الصف الاول</p></div>
                </div>
            </div>
        </div>

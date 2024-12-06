@@ -1,7 +1,10 @@
+import Container from '@/components/Container'
 import React from 'react'
 
 export default function Login() {
   return (
-    <div>Login</div>
+    <Container>
+    <div>Regist</div>
+  </Container>
   )
 }
