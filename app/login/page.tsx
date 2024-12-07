@@ -4,7 +4,7 @@ import React from 'react'
 export default function Login() {
   return (
     <Container>
-    <div>Regist</div>
+    <div>login</div>
   </Container>
   )
 }
