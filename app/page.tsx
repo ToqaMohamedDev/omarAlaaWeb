@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="">
     <Hero/>
-    <PlayerYoutube/>
+
     <BagAnimation/>
     </div>
   );
@@ -16,7 +16,7 @@ export default function Home() {
 /*
 git init
 git add .
-git commit -m "first5"
+git commit -m "first6"
 git branch -M main
 git remote add origin https://github.com/ToqaMohamedDev/omarAlaaWeb.git
 git push -u origin main

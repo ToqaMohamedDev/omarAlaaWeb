@@ -114,7 +114,7 @@ body {
 }
 
 .bag-img {
-  @apply  w-[300px]   absolute top-0 z-30 h-[300px];
+  @apply  sm:w-[250px] w-[200px]   absolute top-0 z-30 sm:h-[250px] h-[200px];
 }
 
 .books {
