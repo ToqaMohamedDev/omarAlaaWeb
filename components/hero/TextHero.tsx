@@ -21,7 +21,7 @@ export default function TextHero() {
      <h2 className='text-[55px] font-bold '>عــمـر عــرفة</h2>
      </div>
     <p 
-    className='text-muted-foreground text-lg  font-light max-w-[450px]'> سيكون العميل  الاختيار، أن يتحمل مسؤوليات مزايا مخترعه الحكيم وأن يعميه. وفيه الخطأ الذي يمنع رد إنكارهم .</p>
+    className='text-muted-foreground text-lg  font-light max-w-[450px]'>العميل نفسه، سيكون العميل قادرا على متابعة للشركة. لا ينبغي لأي شخص أبدًا، مع عمل الاختيار، أن يتحمل مسؤوليات مزايا مخترعه الحكيم وأن يعميه. وفيه الخطأ الذي يمنع رد إنكارهم برفضهم.</p>
     <div className="flex flex-col gap-y-3 md:flex-row gap-x-3  my-6">
               <Link href="/contact">
                 <Button className="gap-x-2">
