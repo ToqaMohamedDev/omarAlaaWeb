@@ -1,15 +1,27 @@
+'use client'
 import React from 'react'
 import Social from '../footer/socials'
 import Link from 'next/link'
 import { Button } from '../ui/button'
 import { Download, Send } from 'lucide-react'
-
+import { motion } from 'framer-motion'
+ 
 export default function TextHero() {
   return (
-    <div  className='md:w-1/2 md:text-right text-center flex flex-col md:items-end items-center'>
-    <h1 className='text-[22px] font-bold text-primary'>اللــغـه الـعــربية</h1>
-    <h2 className='text-[55px] font-bold '>عــمـر عــرفة</h2>
-    <p className='text-muted-foreground text-lg  font-light text-base  max-w-[550px]'> سيكون العميل  الاختيار، أن يتحمل مسؤوليات مزايا مخترعه الحكيم وأن يعميه. وفيه الخطأ الذي يمنع رد إنكارهم .</p>
+    <motion.div 
+    initial={{ opacity: 0, x: 100 }} // بداية العنصر: شفاف ومتحرك للأعلى
+    animate={{ opacity: 1, x: 0 }}  // الحالة النهائية: يظهر في مكانه
+    exit={{ opacity: 0, x: 100 }}    // عند الخروج: يختفي للأسفل
+    transition={{ duration: 1 }}
+     className='md:w-1/2 md:text-right text-center flex flex-col md:items-end items-center'>
+    <h1
+     
+     className='text-[22px] font-bold text-primary'>اللــغـه الـعــربية</h1>
+     <div className='overflow-hidden'>
+     <h2 className='text-[55px] font-bold '>عــمـر عــرفة</h2>
+     </div>
+    <p 
+    className='text-muted-foreground text-lg  font-light max-w-[450px]'> سيكون العميل  الاختيار، أن يتحمل مسؤوليات مزايا مخترعه الحكيم وأن يعميه. وفيه الخطأ الذي يمنع رد إنكارهم .</p>
     <div className="flex flex-col gap-y-3 md:flex-row gap-x-3  my-6">
               <Link href="/contact">
                 <Button className="gap-x-2">
@@ -28,6 +40,6 @@ export default function TextHero() {
      containerStyles="flex gap-x-6"
     iconStyles="text-foreground text-[22px] hover:text-primary transition-all"
     />
-    </div>
+    </motion.div>
   )
 }
