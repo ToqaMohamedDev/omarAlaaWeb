@@ -11,8 +11,9 @@ import Mobile from './Mobile';
 
 export default function Header() {
     return (
-        <Container>
-            <div className='flex h-[70px] items-center justify-between'>
+        <div className='sticky top-0 left-0 z-50 border-b-2 bg-background shadow-sm'>
+                <Container>
+            <div className='flex  h-[70px] items-center justify-between'>
                 <div className='flex gap-5'>
                     <Logo />
                     <ThemeSwitcher />
@@ -25,5 +26,7 @@ export default function Header() {
                 <Mobile/>
             </div>
         </Container>
+        </div>
+    
     );
 }
