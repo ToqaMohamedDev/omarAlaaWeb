@@ -22,10 +22,6 @@ export default function LevelItem({text}:LevelItemProps) {
     ref={ref}
     style={
         {
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center center',
-          position: 'relative',
           scale:scaleProgress,
           opacity:opacityProgress,
           y:yProgress,

@@ -8,20 +8,21 @@ export default function Level() {
 
     const data = [
         {
-            text: 'الصف الثالث'
+            text: 'الصف الاول الثانوي'
+        },
+       
+
+        {
+            text: 'الصف الثاني الثانوي' 
         },
 
         {
-            text: 'الصف الثاني'
+            text: 'الصف الثالث الثانوي'
         },
-        {
-            text: 'الصف الاول'
-        },
-
     ];
     return (
         <Container>
-            <div className="flex md:text-[35px] text-[25px] items-center justify-center  after:content-[''] after:bg-primary after:rounded-full after:text-[35px] after:m-2 after:p-1.5 pb-10">
+            <div className="flex md:text-[35px]  text-[25px] items-center justify-center  after:content-[''] after:bg-primary after:rounded-full after:text-[35px] after:m-2 after:p-1.5 pb-10">
                 الصفوف الثانوية</div>
             <div className=' grid md:grid-cols-3 grid-cols-1'>
                 {data.map((item, index) => {
