@@ -4,7 +4,7 @@ import Social from './socials'
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary py-12 ">
+    <footer className="bg-secondary py-12 overflow-x-hidden ">
     <Container>
        <div className="flex flex-col items-center justify-between">
           <Social

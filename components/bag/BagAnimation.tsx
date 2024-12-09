@@ -60,11 +60,13 @@ export default function BagAnimation() {
                    scrub: true,
                }
            });
-
            tl.to(bagImg, { rotate: 180 }, 0)
-             .fromTo(book1, {width:0,height:0, scaleX: 0.3, y: 0, x: 0 }, {width:'50px', height:'150px',  y: 50, x: 0, scaleX: 1 }, 1)
-             .fromTo(book2, {width:0,height:0, scaleX: 0.3, y: 0, x: 0 }, {width:'50px', height:'150px',  y: 250, x: 0, scaleX: 1 }, 1)
-             .fromTo(book3, {width:0,height:0, scaleX: 0.3, y: 0, x: 0 }, {width:'50px', height:'150px',  y: 450, x: 0, scaleX: 1 }, 1)    
+             .fromTo(book1, {width:0,height:0, scaleX: 0.3, y: 0, x: 0 },
+                 {width:'50px', height:'150px',  y: 100, x: 0, scaleX: 1 }, 1)
+             .fromTo(book2, {width:0,height:0, scaleX: 0.3, y: 0, x: 0 },
+                 {width:'50px', height:'150px',  y: 300, x: 0, scaleX: 1 }, 1)
+             .fromTo(book3, {width:0,height:0, scaleX: 0.3, y: 0, x: 0 },
+                 {width:'50px', height:'150px',  y: 500, x: 0, scaleX: 1 }, 1)    
              .to(book1,{width:"300px"},2)
              .to(book2,{width:"300px"},2)
              .to(book3,{width:"300px"},2)
@@ -78,9 +80,9 @@ export default function BagAnimation() {
            <div className='in-bag' ref={bagRef}>
                <Image src={bag} ref={bagImgRef} className='bag-img' alt='BAG' />
                <div ref={booksRef} className='books text-[0px]'>
-                   <div  ref={book1Ref} className='book-1' ><Book size={25} className='text-primary'/><p>تمارين وامتحانات</p></div>
-                   <div  ref={book2Ref} className='book-2' ><Book size={25} className='text-primary'/><p>مرجعات قوبة</p></div>
-                   <div  ref={book3Ref} className='book-3' ><Book size={25} className='text-primary'/><p>شرح المنهج</p></div>
+                   <div  ref={book1Ref} className='book-1' ><p>تمارين وامتحانات</p></div>
+                   <div  ref={book2Ref} className='book-2' ><p>مرجعات قوبة</p></div>
+                   <div  ref={book3Ref} className='book-3' ><p>شرح المنهج</p></div>
                </div>
            </div>
        </div>

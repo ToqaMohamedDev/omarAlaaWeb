@@ -27,7 +27,7 @@ export default function LevelItem({text}:LevelItemProps) {
           y:yProgress,
         }
       }
-    className='flex flex-col gap-2 items-center justify-center bg-secondary  p-5 m-5 rounded-2xl  border-gray-800 hover:border-primary border-[1px] hover:scale-110'
+    className='flex flex-col gap-2 items-center justify-center bg-secondary  p-5 m-5 rounded-2xl  border-gray-800 hover:border-primary border-[1px] hover:scale-110 transition-all duration-75'
      >
     <FaBookReader className='text-white' />
     <h1 className='text-white text-center font-bold'>

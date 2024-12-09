@@ -1,4 +1,5 @@
 import BagAnimation from "@/components/bag/BagAnimation";
+import Cta from "@/components/Cta";
 import Hero from "@/components/hero/Hero";
 import Level from "@/components/level/Level";
 import PlayerYoutube from "@/components/player/PlayerYoutube";
